@@ -1,6 +1,6 @@
-NAME		:= megaphone
+NAME		:= PhoneBook
 
-SRCS		:= megaphone.cpp
+SRCS		:= 
 
 OBJ_DIR		:= obj
 
