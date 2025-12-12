@@ -6,7 +6,7 @@ PhoneBook::PhoneBook(){
 PhoneBook::~PhoneBook(){
 }
 
-void PhoneBook::addContact(int index){
+void PhoneBook::addContact(){
     std::string prompts[5] = {
         "Enter First Name:",
         "Enter Last Name:",
@@ -21,8 +21,10 @@ void PhoneBook::addContact(int index){
     for (size_t i = 0; i < 5; i++){
         std::cout << prompts[i];
 
-        if (!std::getline(std::cin, input))
-            break;
+        if (!std::getline(std::cin, input)){
+            std::cout << "You've entered Ctrl-D. Your contact is not saved.";
+            return ;
+        }
 
         if (input.empty()){
             std::cout << "Field cannot be empty. Write something!";
@@ -33,4 +35,9 @@ void PhoneBook::addContact(int index){
     }
 
     // ... Save into the PhoneBook logic:
+    if (_numContacts < 8){
+        Contacts[_numContacts] = NewContact;
+        _numContacts++;
+    } else
+        Contacts[_numContacts - 1] = NewContact;
 }

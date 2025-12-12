@@ -9,14 +9,13 @@ class PhoneBook{
 
 private:
     Contact Contacts[8];
+    int _numContacts;
+    int _lastContact;
 
 public:
     PhoneBook();
     ~PhoneBook();
-    void addContact(int index);
+    void addContact();
 };
-
-
-
 
 #endif

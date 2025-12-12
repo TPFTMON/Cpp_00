@@ -14,12 +14,12 @@
 class Contact {
 
 private:
-    std::string Info[5];
+    std::string _info[5];
 
 public:
-    Contact(/* args */);
+    Contact();
     ~Contact();
-    void    Contact::SetInfo(int findex, std::string value);
+    void        Contact::SetInfo(int findex, std::string value);
     std::string GetInfo(int findex);
 };
 
