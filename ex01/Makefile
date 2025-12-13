@@ -1,6 +1,6 @@
 NAME		:= PhoneBook
 
-SRCS		:= 
+SRCS		:=
 
 OBJ_DIR		:= obj
 

@@ -31,13 +31,13 @@ void PhoneBook::addContact(){
             i--;
             continue;
         }
-        NewContact.SetInfo(i, input);
+        NewContact.setInfo(i, input);
     }
 
-    // ... Save into the PhoneBook logic:
     if (_numContacts < 8){
         Contacts[_numContacts] = NewContact;
         _numContacts++;
-    } else
+    } else {
         Contacts[_numContacts - 1] = NewContact;
+    }
 }

@@ -19,8 +19,8 @@ private:
 public:
     Contact();
     ~Contact();
-    void        Contact::SetInfo(int findex, std::string value);
-    std::string GetInfo(int findex);
+    void        setInfo(int findex, std::string value);
+    std::string getInfo(int findex);
 };
 
 #endif
