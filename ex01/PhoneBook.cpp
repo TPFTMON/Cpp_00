@@ -1,6 +1,7 @@
 #include "PhoneBook.hpp"
 
 PhoneBook::PhoneBook(){
+    this->_numContacts = 0;
 }
 
 PhoneBook::~PhoneBook(){

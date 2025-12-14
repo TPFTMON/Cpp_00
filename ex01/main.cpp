@@ -28,6 +28,7 @@ int main()
             search_pb(/*PBook*/);
         } else if (input == "EXIT"){
             exit_pb();
+            break;
         } else
             continue;
     }
