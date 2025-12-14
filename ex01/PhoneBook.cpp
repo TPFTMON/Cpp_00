@@ -8,18 +8,18 @@ PhoneBook::~PhoneBook(){
 
 void PhoneBook::addContact(){
     std::string prompts[5] = {
-        "Enter First Name:",
-        "Enter Last Name:",
-        "Enter Nickname",
-        "Enter Phone Number:",
-        "Enter Darkest Secret:"
+        "Enter First Name: ",
+        "Enter Last Name: ",
+        "Enter Nickname: ",
+        "Enter Phone Number: ",
+        "Enter Darkest Secret: "
     };
 
     Contact NewContact;
     std::string input;
 
-    for (size_t i = 0; i < 5; i++){
-        std::cout << prompts[i];
+    for (size_t findex = 0; findex < 5; findex++){
+        std::cout << prompts[findex];
 
         if (!std::getline(std::cin, input)){
             std::cout << "You've entered Ctrl-D. Your contact is not saved.";
@@ -28,10 +28,10 @@ void PhoneBook::addContact(){
 
         if (input.empty()){
             std::cout << "Field cannot be empty. Write something!";
-            i--;
+            findex--;
             continue;
         }
-        NewContact.setInfo(i, input);
+        NewContact.setInfo(findex, input);
     }
 
     if (_numContacts < 8){

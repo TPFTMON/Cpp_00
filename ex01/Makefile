@@ -1,6 +1,6 @@
 NAME		:= PhoneBook
 
-SRCS		:=
+SRCS		:= main.cpp PhoneBook.cpp Contact.cpp
 
 OBJ_DIR		:= obj
 

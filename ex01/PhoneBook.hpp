@@ -10,7 +10,6 @@ class PhoneBook{
 private:
     Contact Contacts[8];
     int _numContacts;
-    int _lastContact;
 
 public:
     PhoneBook();
