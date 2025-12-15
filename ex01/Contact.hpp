@@ -3,14 +3,6 @@
 
 # include <string>
 
-// enum    Fields {
-//     FirstN,
-//     LastN,
-//     NickN,
-//     PhoneNum,
-//     Secret
-// };
-
 class Contact {
 
 private:
@@ -20,7 +12,15 @@ public:
     Contact();
     ~Contact();
     void        setInfo(int findex, std::string value);
-    std::string getInfo(int findex);
+    std::string getInfo(int findex) const;
 };
+
+// enum    Fields {
+//     FirstN,
+//     LastN,
+//     NickN,
+//     PhoneNum,
+//     Secret
+// };
 
 #endif

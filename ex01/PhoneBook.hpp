@@ -3,6 +3,8 @@
 
 # include <string>
 # include <iostream>
+# include <iomanip>
+# include <sstream>
 # include "Contact.hpp"
 
 class PhoneBook{
@@ -15,6 +17,7 @@ public:
     PhoneBook();
     ~PhoneBook();
     void addContact();
+    void searchContact() const;
 };
 
 #endif
