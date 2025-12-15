@@ -10,8 +10,12 @@ int main()
               << "(You can have a maximum of 8 contacts at a time.)\n---\n"
               << "You have three commands to choose from:\nADD, SEARCH or EXIT\n\n";
     while (1){
-        std::cout << "Command> ";
-        std::getline(std::cin, input);
+        std::cout << "PhoneBook> ";
+
+        if (!std::getline(std::cin, input)){
+            std::cout << "Ctrl-D? Seriously? Bye.\n";
+            break ;
+        }
         if (input == "ADD"){
             PBook.addContact();
         } else if (input == "SEARCH"){

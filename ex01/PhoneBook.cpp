@@ -24,8 +24,7 @@ void    PhoneBook::addContact(){
     for (size_t findex = 0; findex < 5; findex++){
         std::cout << prompts[findex];
 
-        if (!std::getline(std::cin, input)){ // !!!!!!!!!!!!!!!!!!!!!
-            std::cout << std::endl << "You've entered Ctrl-D. Your contact is not saved.\n";
+        if (!std::getline(std::cin, input)){
             return ;
         }
 
@@ -64,7 +63,7 @@ std::string truncate_ten(const std::string& str){
 
 void    PhoneBook::searchContact() const { // (const to show that we don't modify anything)
     if (_numContacts == 0){
-        std::cout << "There are no contacts, friendo! Go do some ADD command";
+        std::cout << "There are no contacts, friendo! Go do some ADD commands\n";
         return ;
     }
 
@@ -82,7 +81,9 @@ void    PhoneBook::searchContact() const { // (const to show that we don't modif
 
     std::string input;
     std::cout << "\nEnter any index from 0 to " << (_numContacts - 1) << " to display more information about this contact: ";
-    std::getline(std::cin, input);
+    if (!std::getline(std::cin, input)){
+        return ;
+    }
     std::istringstream iss(input);
     int index = -1;
     if (!(iss >> index) || index < 0 || index >= _numContacts){
